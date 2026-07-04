@@ -113,7 +113,7 @@ krishi-ai/
 ## 1. Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/krishi-ai.git
+git clone https://github.com/amitgupta226571/krishi-ai.git
 
 cd krishi-ai
 ```
