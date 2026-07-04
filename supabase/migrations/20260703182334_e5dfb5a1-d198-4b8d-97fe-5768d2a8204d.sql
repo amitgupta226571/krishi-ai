@@ -1,0 +1,7 @@
+
+CREATE POLICY "Users read own crop images" ON storage.objects FOR SELECT
+  USING (bucket_id = 'crop-images' AND auth.uid()::text = (storage.foldername(name))[1]);
+CREATE POLICY "Users upload own crop images" ON storage.objects FOR INSERT
+  WITH CHECK (bucket_id = 'crop-images' AND auth.uid()::text = (storage.foldername(name))[1]);
+CREATE POLICY "Users delete own crop images" ON storage.objects FOR DELETE
+  USING (bucket_id = 'crop-images' AND auth.uid()::text = (storage.foldername(name))[1]);
